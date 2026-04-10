@@ -1,0 +1,131 @@
+{
+  "profil": [
+    {
+      "id": 1,
+      "type": "formation",
+      "annee": "2024 - Présent",
+      "titre": "Master Finance & Gestion Digitale",
+      "etablissement": "Université de Meknès",
+      "description": "Spécialisation en finance d’entreprise et technologies digitales. Projet de fin d’études : Analyse prédictive des marchés financiers.",
+      "lieu": "Meknès, Maroc"
+    },
+    {
+      "id": 2,
+      "type": "experience",
+      "annee": "2023 - 2024",
+      "titre": "Stage Analyste Financier",
+      "etablissement": "Banque Populaire",
+      "description": "Élaboration de modèles de prévision budgétaire et analyse de risques pour un portefeuille de 12 clients corporate.",
+      "lieu": "Meknès, Maroc"
+    },
+    {
+      "id": 3,
+      "type": "formation",
+      "annee": "2022 - 2023",
+      "titre": "Licence en Sciences Économiques",
+      "etablissement": "Université de Meknès",
+      "description": "Mention Bien – Mémoire : Impact des FinTech sur l’inclusion financière au Maroc.",
+      "lieu": "Meknès, Maroc"
+    }
+  ],
+  "competences": {
+    "gestion": [
+      { "nom": "Analyse Financière", "niveau": 5 },
+      { "nom": "Gestion de Projets", "niveau": 4 },
+      { "nom": "Stratégie d’Entreprise", "niveau": 5 },
+      { "nom": "Contrôle de Gestion", "niveau": 4 }
+    ],
+    "outils": [
+      { "nom": "Python", "niveau": 4 },
+      { "nom": "Excel Avancé + VBA", "niveau": 5 },
+      { "nom": "Power BI", "niveau": 5 },
+      { "nom": "SQL", "niveau": 4 },
+      { "nom": "Tableau", "niveau": 3 }
+    ]
+  },
+  "projets": [
+    {
+      "id": 1,
+      "titre": "Analyse Prédictive des Marchés Financiers",
+      "hook": "Modèle ML pour prévision des cours boursiers",
+      "categorie": "Finance",
+      "date": "2025",
+      "lieu": "Meknès",
+      "description": "Développement d’un algorithme de prédiction des tendances boursières utilisant Python, Pandas et Scikit-learn. Résultats : +87 % de précision sur données historiques.",
+      "image": "assets/images/projet1.jpg"
+    },
+    {
+      "id": 2,
+      "titre": "Dashboard de Pilotage Financier",
+      "hook": "Outil interactif de reporting en temps réel",
+      "categorie": "Gestion",
+      "date": "2024",
+      "lieu": "Banque Populaire",
+      "description": "Création d’un tableau de bord Power BI pour le suivi des KPI financiers. Intégration de données SQL et automatisation des rapports mensuels.",
+      "image": "assets/images/projet2.jpg"
+    },
+    {
+      "id": 3,
+      "titre": "Plateforme FinTech d’Inclusion Bancaire",
+      "hook": "Solution mobile pour la micro-finance au Maroc",
+      "categorie": "Digital",
+      "date": "2024",
+      "lieu": "Projet personnel",
+      "description": "Prototype d’application web permettant aux artisans de Meknès d’accéder à des microcrédits via une analyse automatisée de leur historique.",
+      "image": "assets/images/projet3.jpg"
+    }
+  ],
+  "passions": [
+    {
+      "id": 1,
+      "icone": "📈",
+      "titre": "Finance Durable",
+      "phrase": "Investir dans l’impact positif"
+    },
+    {
+      "id": 2,
+      "icone": "🔗",
+      "titre": "Blockchain & Web3",
+      "phrase": "Décentraliser la confiance"
+    },
+    {
+      "id": 3,
+      "icone": "📖",
+      "titre": "Stratégie & Lecture",
+      "phrase": "Comprendre pour mieux anticiper"
+    },
+    {
+      "id": 4,
+      "icone": "🌍",
+      "titre": "Voyages & Cultures",
+      "phrase": "Ouvrir son regard au monde"
+    }
+  ],
+
+  "blog": [
+    {
+      "id": 1,
+      "titre": "L’impact des FinTech sur l’inclusion financière au Maroc",
+      "date": "08 avril 2026",
+      "categorie": "Finance",
+      "resume": "Analyse des solutions digitales qui permettent aux artisans de Meknès d’accéder plus facilement au crédit.",
+      "contenu": "# L’impact des FinTech sur l’inclusion financière au Maroc\n\nLes FinTech transforment profondément le paysage bancaire marocain. Dans cet article, nous explorons comment les applications de microcrédit digital réduisent les barrières d’accès pour les PME locales.\n\n## Points clés\n- Réduction de 40 % des délais de traitement\n- Taux d’approbation multiplié par 3\n- Exemple concret : plateforme testée à Meknès"
+    },
+    {
+      "id": 2,
+      "titre": "Gestion de projet agile en finance : retour d’expérience",
+      "date": "02 avril 2026",
+      "categorie": "Gestion",
+      "resume": "Comment j’ai appliqué Scrum lors de mon stage à la Banque Populaire pour optimiser les rapports mensuels.",
+      "contenu": "# Gestion de projet agile en finance\n\nLe framework Scrum a permis une livraison 30 % plus rapide des deliverables. Retour détaillé sur les outils utilisés et les leçons apprises."
+    },
+    {
+      "id": 3,
+      "titre": "Pourquoi j’ai choisi la blockchain pour mon projet de fin d’études",
+      "date": "25 mars 2026",
+      "categorie": "Divers",
+      "resume": "Réflexion personnelle sur l’avenir de la finance décentralisée et ses applications concrètes au Maroc.",
+      "contenu": "# La blockchain au service de la finance durable\n\nUn sujet qui me passionne particulièrement. Dans cet article, je partage mes premières expérimentations."
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio & Blog - Cécé Gilbert">
+    <title>Cécé Gilbert | Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts : Inter (titres) + Plus Jakarta Sans (texte) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Plus+Jakarta+Sans:wght@400;500&display=swap');
+        
+        :root {
+            --primary: #3B82F6;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+        }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Dark mode strict */
+        .dark {
+            background-color: #0F172A;
+            color: #F8F9FA;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen">
+    <!-- HEADER -->
+<!-- HEADER (mise à jour avec menu mobile complet) -->
+<header class="sticky top-0 z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#3B82F6] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">CG</div>
+            <span class="text-2xl font-black tracking-tighter">Cécé Gilbert</span>
+        </div>
+        
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex items-center gap-8 text-lg">
+            <a href="index.html" class="hover:text-[#3B82F6] transition-colors">Accueil</a>
+            <a href="index.html#profil" class="hover:text-[#3B82F6] transition-colors">Profil</a>
+            <a href="index.html#competences" class="hover:text-[#3B82F6] transition-colors">Compétences</a>
+            <a href="index.html#projets" class="hover:text-[#3B82F6] transition-colors">Projets</a>
+            <a href="index.html#passions" class="hover:text-[#3B82F6] transition-colors">Passions</a>
+            <a href="blog.html" class="hover:text-[#3B82F6] transition-colors">Blog</a>
+        </nav>
+        
+        <!-- Bouton CV + Hamburger -->
+        <div class="flex items-center gap-4">
+            <a href="assets/docs/CV.pdf" target="_blank" 
+               class="flex items-center gap-2 bg-[#3B82F6] text-white px-6 py-3 rounded-2xl font-medium hover:bg-[#2563EB] transition-all">
+                <span>Télécharger CV</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v-4m0 0l4 4m-4-4l4-4m12 0v4m0 0l-4-4m4 4l-4 4" />
+                </svg>
+            </a>
+            
+            <button id="hamburger" class="md:hidden w-11 h-11 flex items-center justify-center text-4xl leading-none">☰</button>
+        </div>
+    </div>
+
+    <!-- MENU MOBILE (panneau latéral) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black/80 z-[9999] md:hidden">
+        <div class="glass w-4/5 max-w-xs h-full ml-auto p-8 flex flex-col">
+            <button onclick="closeMobileMenu()" class="self-end text-5xl mb-12">×</button>
+            <nav class="flex flex-col gap-8 text-2xl font-medium">
+                <a href="index.html" onclick="closeMobileMenu()" class="hover:text-[#3B82F6]">Accueil</a>
+                <a href="index.html#profil" onclick="closeMobileMenu()" class="hover:text-[#3B82F6]">Profil</a>
+                <a href="index.html#competences" onclick="closeMobileMenu()" class="hover:text-[#3B82F6]">Compétences</a>
+                <a href="index.html#projets" onclick="closeMobileMenu()" class="hover:text-[#3B82F6]">Projets</a>
+                <a href="index.html#passions" onclick="closeMobileMenu()" class="hover:text-[#3B82F6]">Passions</a>
+                <a href="blog.html" onclick="closeMobileMenu()" class="hover:text-[#3B82F6]">Blog</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- HERO - DOUBLE COLONNE -->
+    <section class="min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Colonne Gauche -->
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-6 py-2 bg-[#1E293B] rounded-3xl text-sm font-medium">
+                    <div class="w-2 h-2 bg-[#3B82F6] rounded-full animate-pulse"></div>
+                    Étudiant en Finance & Gestion
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-black leading-none tracking-tighter">
+                    Cécé Gilbert
+                </h1>
+                
+                <p class="text-3xl text-[#3B82F6] font-medium">
+                    Transformer les idées en valeur durable.
+                </p>
+                
+                <div class="max-w-md text-lg leading-relaxed text-[#F8F9FA]/90">
+                    Statut actuel : Étudiant en Master Finance<br>
+                    Aspirations : Développer des solutions innovantes en finance digitale<br>
+                    Philosophie : L’excellence naît de la rigueur et de la curiosité.
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="px-8 py-4 bg-[#3B82F6] text-white rounded-2xl font-medium hover:bg-[#2563EB] transition-all">
+                        Découvrir mes projets
+                    </a>
+                    <a href="#" class="px-8 py-4 border border-white/30 hover:border-white/60 rounded-2xl font-medium transition-all">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Colonne Droite : Portrait + Infographie -->
+            <div class="relative flex justify-center">
+                <div class="w-96 h-96 bg-[#1E293B] rounded-3xl overflow-hidden shadow-2xl relative">
+                    <!-- Placeholder portrait (à remplacer par votre photo plus tard) -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 to-transparent flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-40 h-40 mx-auto bg-white/10 backdrop-blur-xl rounded-3xl flex items-center justify-center text-7xl mb-6">
+                                👤
+                            </div>
+                            <p class="text-white/70 text-sm">Votre photo pro ici</p>
+                        </div>
+                    </div>
+                    <!-- Lignes de force géométriques (infographie) -->
+                    <div class="absolute inset-0 opacity-30">
+                        <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="200" cy="200" r="120" stroke="#3B82F6" stroke-width="2"/>
+                            <circle cx="200" cy="200" r="80" stroke="#3B82F6" stroke-width="1"/>
+                            <line x1="80" y1="200" x2="320" y2="200" stroke="#3B82F6" stroke-width="1"/>
+                            <line x1="200" y1="80" x2="200" y2="320" stroke="#3B82F6" stroke-width="1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- SECTION PROFIL - TIMELINE INTERACTIVE -->
+    <section id="profil" class="py-24 bg-[#0F172A]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-black text-center mb-16 tracking-tighter">Mon Parcours</h2>
+            
+            <div class="relative">
+                <!-- Ligne centrale -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#3B82F6] to-transparent hidden md:block"></div>
+                
+                <div class="space-y-16" id="timeline">
+                    <!-- Les éléments seront injectés dynamiquement par JS depuis data.json -->
+                </div>
+            </div>
+
+        <!-- SECTION COMPÉTENCES - DOUBLE COLONNE -->
+    <section id="competences" class="py-24 bg-[#0F172A]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-black text-center mb-16 tracking-tighter">Compétences</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16" id="competences-container">
+                <!-- Les colonnes seront injectées dynamiquement par JS -->
+            </div>
+        </div>
+    </section>
+
+        <!-- SECTION PROJETS -->
+    <section id="projets" class="py-24 bg-[#0F172A]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-black text-center mb-16 tracking-tighter">Mes Projets</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8" id="projets-container">
+                <!-- Cartes générées dynamiquement par JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALE PROJET -->
+    <section id="modal-projet" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div class="glass max-w-4xl w-full mx-4 rounded-3xl overflow-hidden max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-[#1E293B] px-8 py-5 flex items-center justify-between border-b border-white/10">
+                <h3 id="modal-titre" class="text-2xl font-black"></h3>
+                <button onclick="closeModal()" class="text-4xl leading-none text-[#F8F9FA]/60 hover:text-white">×</button>
+            </div>
+            
+            <div class="p-8">
+                <div id="modal-image" class="w-full h-80 bg-[#1E293B] rounded-3xl mb-8 flex items-center justify-center text-7xl"></div>
+                
+                <div class="flex gap-6 text-sm mb-8">
+                    <div><span class="text-[#3B82F6]">Date :</span> <span id="modal-date" class="font-medium"></span></div>
+                    <div><span class="text-[#3B82F6]">Lieu :</span> <span id="modal-lieu" class="font-medium"></span></div>
+                    <div><span id="modal-categorie-badge" class="px-4 py-1 bg-[#3B82F6] text-white rounded-3xl text-xs font-medium"></span></div>
+                </div>
+                
+                <div id="modal-description" class="prose prose-invert max-w-none text-[#F8F9FA]/90 leading-relaxed"></div>
+            </div>
+        </div>
+    </section>
+
+        <!-- SECTION PASSIONS -->
+    <section id="passions" class="py-24 bg-[#0F172A]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-black text-center mb-16 tracking-tighter">Mes Passions</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8" id="passions-container">
+                <!-- Cartes générées dynamiquement par JS -->
+            </div>
+        </div>
+    </section>
+
+        <!-- SECTION CONTACT -->
+    <section id="contact" class="py-24 bg-[#0F172A]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-black text-center mb-16 tracking-tighter">Me Contacter</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Formulaire -->
+                <div class="glass p-10 rounded-3xl">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm mb-2 text-[#F8F9FA]/70">Nom complet</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full glass px-6 py-4 rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3B82F6]">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 text-[#F8F9FA]/70">Adresse email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full glass px-6 py-4 rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3B82F6]">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 text-[#F8F9FA]/70">Objet</label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="w-full glass px-6 py-4 rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3B82F6]">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 text-[#F8F9FA]/70">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full glass px-6 py-4 rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3B82F6]"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="w-full bg-[#3B82F6] hover:bg-[#2563EB] py-5 rounded-3xl font-medium text-lg transition-all">
+                            Envoyer le message
+                        </button>
+                        <p id="form-status" class="text-center text-sm mt-4"></p>
+                    </form>
+                </div>
+
+                <!-- Infos contact -->
+                <div class="space-y-8">
+                    <div class="glass p-10 rounded-3xl">
+                        <h3 class="text-2xl font-black mb-6">Restons en contact</h3>
+                        <p class="text-[#F8F9FA]/70 leading-relaxed">Que ce soit pour une opportunité, un projet ou simplement échanger sur la finance digitale, je suis toujours ouvert à la discussion.</p>
+                    </div>
+
+                    <!-- Liens sociaux -->
+                    <div class="flex gap-6 justify-center">
+                        <a href="https://linkedin.com" target="_blank" class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all">🔗</a>
+                        <a href="https://github.com" target="_blank" class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all">🐙</a>
+                        <a href="https://twitter.com" target="_blank" class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all">𝕏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer class="bg-[#0F172A] border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Derniers articles -->
+                <div>
+                    <h4 class="text-lg font-black mb-6">Derniers articles</h4>
+                    <div id="footer-last-posts" class="space-y-6"></div>
+                </div>
+
+                <!-- Navigation rapide -->
+                <div>
+                    <h4 class="text-lg font-black mb-6">Navigation</h4>
+                    <div class="flex flex-col gap-3 text-[#F8F9FA]/70">
+                        <a href="index.html" class="hover:text-[#3B82F6]">Accueil</a>
+                        <a href="index.html#profil" class="hover:text-[#3B82F6]">Profil</a>
+                        <a href="index.html#competences" class="hover:text-[#3B82F6]">Compétences</a>
+                        <a href="index.html#projets" class="hover:text-[#3B82F6]">Projets</a>
+                        <a href="index.html#passions" class="hover:text-[#3B82F6]">Passions</a>
+                        <a href="blog.html" class="hover:text-[#3B82F6]">Blog</a>
+                    </div>
+                </div>
+
+                <!-- Crédits -->
+                <div class="text-[#F8F9FA]/60 text-sm">
+                    <p>© 2026 Cécé Gilbert – Portfolio étudiant</p>
+                    <p class="mt-2">Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Configuration Tailwind
+        tailwind.config = {
+            content: ["./**/*.{html,js}"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        darkbg: '#0F172A',
+                        card: '#1E293B'
+                    }
+                }
+            }
+        }
+        
+        // Hamburger mobile (basique pour l'instant)
+        document.getElementById('hamburger').addEventListener('click', () => {
+            alert('Menu mobile sera implémenté à l’étape suivante.');
+        });
+    </script>
+
+        <script src="assets/js/main.js"></script>
+
+</body>
+</html>

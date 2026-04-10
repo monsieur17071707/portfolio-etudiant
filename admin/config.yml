@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: monsieur17071707/portfolio-etudiant.git
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Articles de blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "DD MMMM YYYY"}
+      - {label: "Catégorie", name: "categorie", widget: "select", options: ["Finance", "Gestion", "Divers"]}
+      - {label: "Résumé", name: "resume", widget: "text"}
+      - {label: "Contenu", name: "body", widget: "markdown"}
