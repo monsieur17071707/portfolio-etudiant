@@ -161,6 +161,7 @@ function openMobileMenu() {
     document.getElementById('mobile-menu').classList.remove('hidden');
     document.getElementById('mobile-menu').classList.add('flex');
 }
+
 function closeMobileMenu() {
     const menu = document.getElementById('mobile-menu');
     menu.classList.add('hidden');
