@@ -33,9 +33,18 @@
       { "nom": "Analyse Financière", "niveau": 5 },
       { "nom": "Gestion de Projets", "niveau": 4 },
       { "nom": "Stratégie d’Entreprise", "niveau": 5 },
+      { "nom": "Contrôle de Gestion", "niveau": 4 },
+      { "nom": "Analyse Fin", "niveau": 5 },
+      { "nom": "Gestion de Pro", "niveau": 4 },
+      { "nom": "Stratégie d’E", "niveau": 5 },
       { "nom": "Contrôle de Gestion", "niveau": 4 }
     ],
     "outils": [
+      { "nom": "Python", "niveau": 4 },
+      { "nom": "Excel Avancé + VBA", "niveau": 5 },
+      { "nom": "Power BI", "niveau": 5 },
+      { "nom": "SQL", "niveau": 4 },
+      { "nom": "Tableau", "niveau": 3 },
       { "nom": "Python", "niveau": 4 },
       { "nom": "Excel Avancé + VBA", "niveau": 5 },
       { "nom": "Power BI", "niveau": 5 },
@@ -44,6 +53,27 @@
     ]
   },
   "projets": [
+    {
+      "id": 1,
+      "titre": "Analyse Prédictive des Marchés Financiers",
+      "hook": "Modèle ML pour prévision des cours boursiers",
+      "categorie": "Finance",
+      "date": "2025",
+      "lieu": "Meknès",
+      "description": "Développement d’un algorithme de prédiction des tendances boursières utilisant Python, Pandas et Scikit-learn. Résultats : +87 % de précision sur données historiques.",
+      "image": "assets/images/projet1.jpg"
+      
+    },
+    {
+      "id": 1,
+      "titre": "Analyse Prédictive des Marchés Financiers",
+      "hook": "Modèle ML pour prévision des cours boursiers",
+      "categorie": "Finance",
+      "date": "2025",
+      "lieu": "Meknès",
+      "description": "Développement d’un algorithme de prédiction des tendances boursières utilisant Python, Pandas et Scikit-learn. Résultats : +87 % de précision sur données historiques.",
+      "image": "assets/images/projet1.jpg"
+    },
     {
       "id": 1,
       "titre": "Analyse Prédictive des Marchés Financiers",
