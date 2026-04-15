@@ -1,13 +1,14 @@
-// Chargement des données depuis data.json
+// ====================== CHARGEMENT DES DONNÉES ======================
 async function loadData() {
     const response = await fetch('data.json');
     return await response.json();
 }
 
-// Rendu de la timeline Profil
+// ====================== RENDU DES SECTIONS ======================
 async function renderTimeline() {
     const data = await loadData();
     const container = document.getElementById('timeline');
+    if (!container) return;
     container.innerHTML = '';
 
     data.profil.forEach((item, index) => {
@@ -21,9 +22,7 @@ async function renderTimeline() {
                     <h3 class="text-2xl font-black">${item.titre}</h3>
                     <p class="text-[#F8F9FA]/70">${item.etablissement} • ${item.lieu}</p>
                 </div>
-                
                 <div class="w-8 h-8 bg-[#3B82F6] rounded-2xl flex items-center justify-center z-10 shadow-lg text-white text-sm font-bold">→</div>
-                
                 <div class="flex-1 glass p-8 rounded-3xl">
                     <p class="text-[#F8F9FA]/90">${item.description}</p>
                 </div>
@@ -33,15 +32,15 @@ async function renderTimeline() {
     });
 }
 
-// Rendu des jauges de compétences
 async function renderCompetences() {
     const data = await loadData();
     const container = document.getElementById('competences-container');
+    if (!container) return;
     container.innerHTML = '';
 
     const colonnes = [
-        { titre: "Gestion d’Entreprise", donnees: data.competences.gestion, couleur: "#3B82F6" },
-        { titre: "Outils & Digital", donnees: data.competences.outils, couleur: "#3B82F6" }
+        { titre: "Gestion d’Entreprise", donnees: data.competences.gestion },
+        { titre: "Outils & Digital", donnees: data.competences.outils }
     ];
 
     colonnes.forEach(colonne => {
@@ -55,8 +54,7 @@ async function renderCompetences() {
                         <span class="text-sm text-[#F8F9FA]/60">${comp.niveau}/5</span>
                     </div>
                     <div class="h-3 bg-[#1E293B] rounded-3xl overflow-hidden">
-                        <div class="h-3 bg-[#3B82F6] transition-all duration-700 group-hover:bg-[#60A5FA]" 
-                             style="width: ${pourcentage}%"></div>
+                        <div class="h-3 bg-[#3B82F6] transition-all duration-700 group-hover:bg-[#60A5FA]" style="width: ${pourcentage}%"></div>
                     </div>
                 </div>
             `;
@@ -72,10 +70,10 @@ async function renderCompetences() {
     });
 }
 
-// Rendu des cartes Projets
 async function renderProjets() {
     const data = await loadData();
     const container = document.getElementById('projets-container');
+    if (!container) return;
     container.innerHTML = '';
 
     data.projets.forEach(projet => {
@@ -93,10 +91,10 @@ async function renderProjets() {
     });
 }
 
-// Rendu des cartes Passions
 async function renderPassions() {
     const data = await loadData();
     const container = document.getElementById('passions-container');
+    if (!container) return;
     container.innerHTML = '';
 
     data.passions.forEach(passion => {
@@ -111,7 +109,7 @@ async function renderPassions() {
     });
 }
 
-// Gestion de la modale Projets
+// ====================== MODALES ======================
 let currentProjets = [];
 
 async function openModal(id) {
@@ -125,10 +123,10 @@ async function openModal(id) {
     document.getElementById('modal-lieu').textContent = projet.lieu;
     document.getElementById('modal-categorie-badge').textContent = projet.categorie;
     document.getElementById('modal-description').innerHTML = `<p>${projet.description}</p>`;
-    
+
     const imageContainer = document.getElementById('modal-image');
     imageContainer.innerHTML = `<div class="text-8xl opacity-30">📸</div><p class="text-white/40 mt-4">Image du projet à ajouter dans assets/images/</p>`;
-    
+
     const modal = document.getElementById('modal-projet');
     modal.classList.remove('hidden');
     modal.classList.add('flex');
@@ -140,23 +138,7 @@ function closeModal() {
     modal.classList.remove('flex');
 }
 
-// Initialisation globale
-document.addEventListener('DOMContentLoaded', () => {
-    renderTimeline();
-    renderCompetences();
-    renderProjets();
-    renderPassions();
-
-    // Fermeture modale avec touche Échap
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-    });
-});
-
-
-
-
-// Menu mobile
+// ====================== MENU MOBILE ======================
 function openMobileMenu() {
     document.getElementById('mobile-menu').classList.remove('hidden');
     document.getElementById('mobile-menu').classList.add('flex');
@@ -168,26 +150,22 @@ function closeMobileMenu() {
     menu.classList.remove('flex');
 }
 
-// Initialisation globale (version finale)
+// ====================== INITIALISATION UNIQUE ======================
 document.addEventListener('DOMContentLoaded', () => {
     renderTimeline();
     renderCompetences();
     renderProjets();
     renderPassions();
-    renderLastPosts();
-    initEmailJS();
 
     // Menu mobile
     const hamburger = document.getElementById('hamburger');
     if (hamburger) hamburger.addEventListener('click', openMobileMenu);
 
-    // Fermeture modales avec Échap
+    // Fermeture avec Échap
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             const modalProjet = document.getElementById('modal-projet');
-            const modalArticle = document.getElementById('modal-article');
             if (modalProjet && modalProjet.classList.contains('flex')) closeModal();
-            if (modalArticle && modalArticle.classList.contains('flex')) closeArticleModal();
             if (document.getElementById('mobile-menu').classList.contains('flex')) closeMobileMenu();
         }
     });
